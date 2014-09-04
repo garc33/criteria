@@ -7,7 +7,7 @@
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>criteria-core</artifactId>
-	<name>core</name>
+	<name>criteria-core</name>
 	<description>Criteria framework</description>
 	<dependencies>
 		<dependency>
