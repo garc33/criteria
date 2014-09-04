@@ -7,10 +7,28 @@
     </parent>
     <artifactId>criteria-fluent</artifactId>
     <name>criteria-fluent</name>
+    <repositories>
+        <repository>
+            <id>garc33-releases</id>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>https://raw.github.com/garc33/m2p2-repository/mvn-repo/maven/releases/</url>
+        </repository>
+        <repository>
+            <id>garc33-snapshots</id>
+            <url>https://raw.github.com/garc33/m2p2-repository/mvn-repo/maven/snapshots/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>fr.herman.criteria</groupId>
             <artifactId>criteria-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>fr.herman</groupId>
+            <artifactId>metatype</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

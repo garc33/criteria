@@ -11,31 +11,31 @@ import fr.herman.criteria.core.criterion.objects.booleans.OrCriterion;
 import fr.herman.criteria.core.criterion.objects.comparable.GreaterCriterion;
 import fr.herman.criteria.core.criterion.objects.comparable.LesserCriterion;
 
-public class PredicateCriterionVisitor extends CriterionVisitor<Boolean, Void>
+public class PredicateCriterionVisitor<OBJECT> extends CriterionVisitor<Boolean, OBJECT>
 {
 
     @Override
-    public <T> Boolean visit(SameCriterion<T> criterion, Void param)
+    public <T> Boolean visit(SameCriterion<T> criterion, OBJECT param)
     {
-        PredicateParameterVisitor<T> visitor = new PredicateParameterVisitor<>();
+        PredicateParameterVisitor<T, OBJECT> visitor = new PredicateParameterVisitor<>();
         return criterion.getLeft().accept(visitor, null) == criterion.getRight().accept(visitor, param);
     }
 
     @Override
-    public <T> Boolean visit(EqualCriterion<T> criterion, Void param)
+    public <T> Boolean visit(EqualCriterion<T> criterion, OBJECT param)
     {
-        PredicateParameterVisitor<T> visitor = new PredicateParameterVisitor<>();
+        PredicateParameterVisitor<T, OBJECT> visitor = new PredicateParameterVisitor<>();
         return Objects.equals(criterion.getLeft().accept(visitor, null), criterion.getRight().accept(visitor, param));
     }
 
     @Override
-    public Boolean visit(NotCriterion criterion, Void param)
+    public Boolean visit(NotCriterion criterion, OBJECT param)
     {
         return !criterion.getSubCriterion().accept(this, param);
     }
 
     @Override
-    public Boolean visit(AndCriterion criterion, Void param)
+    public Boolean visit(AndCriterion criterion, OBJECT param)
     {
         for (Criterion<?> subCriterion : criterion.getList())
         {
@@ -48,7 +48,7 @@ public class PredicateCriterionVisitor extends CriterionVisitor<Boolean, Void>
     }
 
     @Override
-    public Boolean visit(OrCriterion criterion, Void param)
+    public Boolean visit(OrCriterion criterion, OBJECT param)
     {
         for (Criterion<?> subCriterion : criterion.getList())
         {
@@ -61,16 +61,16 @@ public class PredicateCriterionVisitor extends CriterionVisitor<Boolean, Void>
     }
 
     @Override
-    public <T extends Comparable<T>> Boolean visit(LesserCriterion<T> criterion, Void param)
+    public <T extends Comparable<T>> Boolean visit(LesserCriterion<T> criterion, OBJECT param)
     {
-        PredicateParameterVisitor<T> visitor = new PredicateParameterVisitor<>();
+        PredicateParameterVisitor<T, OBJECT> visitor = new PredicateParameterVisitor<>();
         return compare(criterion.getLeft().accept(visitor, null), criterion.getRight().accept(visitor, param)) > 0;
     }
 
     @Override
-    public <T extends Comparable<T>> Boolean visit(GreaterCriterion<T> criterion, Void param)
+    public <T extends Comparable<T>> Boolean visit(GreaterCriterion<T> criterion, OBJECT param)
     {
-        PredicateParameterVisitor<T> visitor = new PredicateParameterVisitor<>();
+        PredicateParameterVisitor<T, OBJECT> visitor = new PredicateParameterVisitor<>();
         return compare(criterion.getLeft().accept(visitor, null), criterion.getRight().accept(visitor, param)) < 0;
     }
 

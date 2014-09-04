@@ -4,19 +4,20 @@ import fr.herman.criteria.core.parameter.ParameterVisitor;
 import fr.herman.criteria.core.parameter.Reference;
 import fr.herman.criteria.core.parameter.StaticValue;
 
-public class PredicateParameterVisitor<T> extends ParameterVisitor<T, Void, T>
+public class PredicateParameterVisitor<T, PARAM> extends ParameterVisitor<T, PARAM, T>
 {
 
     @Override
-    public T visit(StaticValue<T> staticValue, Void param)
+    public T visit(StaticValue<T> staticValue, PARAM param)
     {
         return staticValue.value();
     }
 
     @Override
-    public <OBJECT> T visit(Reference<OBJECT, T> reference, Void param)
+    @SuppressWarnings("unchecked")
+    public <OBJECT> T visit(Reference<OBJECT, T> reference, PARAM param)
     {
-        return reference.value();
+        return reference.value((OBJECT) param);
     }
 
 }
