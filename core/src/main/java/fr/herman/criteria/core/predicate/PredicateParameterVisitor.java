@@ -1,8 +1,8 @@
-package fr.herman.criteria.predicate;
+package fr.herman.criteria.core.predicate;
 
-import fr.herman.criteria.parameter.ParameterVisitor;
-import fr.herman.criteria.parameter.Reference;
-import fr.herman.criteria.parameter.StaticValue;
+import fr.herman.criteria.core.parameter.ParameterVisitor;
+import fr.herman.criteria.core.parameter.Reference;
+import fr.herman.criteria.core.parameter.StaticValue;
 
 public class PredicateParameterVisitor<T> extends ParameterVisitor<T, Void, T>
 {

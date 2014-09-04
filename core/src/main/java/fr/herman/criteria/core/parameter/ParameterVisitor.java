@@ -1,4 +1,4 @@
-package fr.herman.criteria.parameter;
+package fr.herman.criteria.core.parameter;
 
 public abstract class ParameterVisitor<RESULT, PARAM, T>
 {

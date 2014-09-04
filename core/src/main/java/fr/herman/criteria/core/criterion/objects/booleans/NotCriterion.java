@@ -1,7 +1,7 @@
-package fr.herman.criteria.criterion.objects.booleans;
+package fr.herman.criteria.core.criterion.objects.booleans;
 
-import fr.herman.criteria.Criterion;
-import fr.herman.criteria.CriterionVisitor;
+import fr.herman.criteria.core.Criterion;
+import fr.herman.criteria.core.CriterionVisitor;
 
 public class NotCriterion implements Criterion<Boolean>
 {

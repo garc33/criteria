@@ -1,12 +1,12 @@
-package fr.herman.criteria;
+package fr.herman.criteria.core;
 
-import fr.herman.criteria.criterion.objects.EqualCriterion;
-import fr.herman.criteria.criterion.objects.SameCriterion;
-import fr.herman.criteria.criterion.objects.booleans.AndCriterion;
-import fr.herman.criteria.criterion.objects.booleans.NotCriterion;
-import fr.herman.criteria.criterion.objects.booleans.OrCriterion;
-import fr.herman.criteria.criterion.objects.comparable.GreaterCriterion;
-import fr.herman.criteria.criterion.objects.comparable.LesserCriterion;
+import fr.herman.criteria.core.criterion.objects.EqualCriterion;
+import fr.herman.criteria.core.criterion.objects.SameCriterion;
+import fr.herman.criteria.core.criterion.objects.booleans.AndCriterion;
+import fr.herman.criteria.core.criterion.objects.booleans.NotCriterion;
+import fr.herman.criteria.core.criterion.objects.booleans.OrCriterion;
+import fr.herman.criteria.core.criterion.objects.comparable.GreaterCriterion;
+import fr.herman.criteria.core.criterion.objects.comparable.LesserCriterion;
 
 public class ShortOperatorCriterionVisitor extends CriterionVisitor<String, Void>
 {

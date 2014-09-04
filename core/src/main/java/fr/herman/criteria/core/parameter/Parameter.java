@@ -1,6 +1,6 @@
-package fr.herman.criteria.parameter;
+package fr.herman.criteria.core.parameter;
 
-import fr.herman.criteria.Expression;
+import fr.herman.criteria.core.Expression;
 
 public interface Parameter<T> extends Expression<T>
 {

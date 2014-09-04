@@ -1,4 +1,4 @@
-package fr.herman.criteria;
+package fr.herman.criteria.core;
 
 public interface Expression<T>
 {

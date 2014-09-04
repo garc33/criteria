@@ -1,6 +1,6 @@
-package fr.herman.criteria.criterion;
+package fr.herman.criteria.core.criterion;
 
-import fr.herman.criteria.parameter.Parameter;
+import fr.herman.criteria.core.parameter.Parameter;
 
 public class HasParameterLeftAndRight<T>
 {

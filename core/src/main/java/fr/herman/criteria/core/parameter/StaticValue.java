@@ -1,4 +1,4 @@
-package fr.herman.criteria.parameter;
+package fr.herman.criteria.core.parameter;
 
 public class StaticValue<T> implements Parameter<T>
 {

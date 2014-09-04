@@ -1,15 +1,15 @@
-package fr.herman.criteria.predicate;
+package fr.herman.criteria.core.predicate;
 
 import java.util.Objects;
-import fr.herman.criteria.Criterion;
-import fr.herman.criteria.CriterionVisitor;
-import fr.herman.criteria.criterion.objects.EqualCriterion;
-import fr.herman.criteria.criterion.objects.SameCriterion;
-import fr.herman.criteria.criterion.objects.booleans.AndCriterion;
-import fr.herman.criteria.criterion.objects.booleans.NotCriterion;
-import fr.herman.criteria.criterion.objects.booleans.OrCriterion;
-import fr.herman.criteria.criterion.objects.comparable.GreaterCriterion;
-import fr.herman.criteria.criterion.objects.comparable.LesserCriterion;
+import fr.herman.criteria.core.Criterion;
+import fr.herman.criteria.core.CriterionVisitor;
+import fr.herman.criteria.core.criterion.objects.EqualCriterion;
+import fr.herman.criteria.core.criterion.objects.SameCriterion;
+import fr.herman.criteria.core.criterion.objects.booleans.AndCriterion;
+import fr.herman.criteria.core.criterion.objects.booleans.NotCriterion;
+import fr.herman.criteria.core.criterion.objects.booleans.OrCriterion;
+import fr.herman.criteria.core.criterion.objects.comparable.GreaterCriterion;
+import fr.herman.criteria.core.criterion.objects.comparable.LesserCriterion;
 
 public class PredicateCriterionVisitor extends CriterionVisitor<Boolean, Void>
 {

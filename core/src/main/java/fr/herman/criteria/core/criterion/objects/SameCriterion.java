@@ -1,9 +1,9 @@
-package fr.herman.criteria.criterion.objects;
+package fr.herman.criteria.core.criterion.objects;
 
-import fr.herman.criteria.Criterion;
-import fr.herman.criteria.CriterionVisitor;
-import fr.herman.criteria.criterion.HasParameterLeftAndRight;
-import fr.herman.criteria.parameter.Parameter;
+import fr.herman.criteria.core.Criterion;
+import fr.herman.criteria.core.CriterionVisitor;
+import fr.herman.criteria.core.criterion.HasParameterLeftAndRight;
+import fr.herman.criteria.core.parameter.Parameter;
 
 public class SameCriterion<T extends Object> extends HasParameterLeftAndRight<T> implements Criterion<T>
 {

@@ -1,4 +1,4 @@
-package fr.herman.criteria.criterion;
+package fr.herman.criteria.core.criterion;
 
 import java.util.List;
 
