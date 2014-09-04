@@ -2,11 +2,11 @@ package fr.herman.criteria.criterion;
 
 import fr.herman.criteria.parameter.Parameter;
 
-public class HasLeftAndRight<T>
+public class HasParameterLeftAndRight<T>
 {
     private final Parameter<T> left, right;
 
-    public HasLeftAndRight(Parameter<T> left, Parameter<T> right)
+    public HasParameterLeftAndRight(Parameter<T> left, Parameter<T> right)
     {
         this.left = left;
         this.right = right;

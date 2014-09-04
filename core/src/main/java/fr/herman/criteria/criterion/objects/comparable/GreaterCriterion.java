@@ -2,13 +2,13 @@ package fr.herman.criteria.criterion.objects.comparable;
 
 import fr.herman.criteria.Criterion;
 import fr.herman.criteria.CriterionVisitor;
-import fr.herman.criteria.criterion.HasLeftAndRight;
+import fr.herman.criteria.criterion.HasParameterLeftAndRight;
 import fr.herman.criteria.parameter.Parameter;
 
-public class LesserCriterion<T extends Comparable<T>> extends HasLeftAndRight<T> implements Criterion<T>
+public class GreaterCriterion<T extends Comparable<T>> extends HasParameterLeftAndRight<T> implements Criterion<T>
 {
 
-    public LesserCriterion(Parameter<T> left, Parameter<T> right)
+    public GreaterCriterion(Parameter<T> left, Parameter<T> right)
     {
         super(left, right);
     }
